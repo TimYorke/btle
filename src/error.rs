@@ -1,8 +1,10 @@
+
 //! Generic Error Trait. Similar to `std::error::Error`.
 
 /// Generic Error type. Similar to `std::error::Error` but supports `no_std`. If the `std` feature
 /// is enabled, `Error` will implement `std::error::Error`. Automatically implements `fmt::Display`
 /// by using the `Debug` implementation (`"{:?}"`).
+use alloc::boxed::Box;
 pub trait Error: core::fmt::Debug {
     /// The lower-level source of this error, if any.
     fn source(&self) -> Option<&(dyn Error + 'static)> {

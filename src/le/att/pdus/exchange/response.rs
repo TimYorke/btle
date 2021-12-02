@@ -2,7 +2,7 @@ use crate::le::att::pdus::{PackablePDU, Response, UnpackablePDU};
 use crate::le::att::Opcode;
 use crate::le::connection::MTU;
 use crate::PackError;
-use std::convert::TryInto;
+use core::convert::TryInto;
 
 #[derive(Copy, Clone, Ord, PartialOrd, Eq, PartialEq, Debug, Hash)]
 pub struct ExchangeMTURsp(pub MTU);

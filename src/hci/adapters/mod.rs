@@ -2,6 +2,7 @@
 pub mod buffer;
 pub mod le;
 
+use alloc::boxed::Box;
 use crate::bytes::Storage;
 use crate::hci::adapter;
 use crate::hci::adapters::le::LEAdapter;

@@ -22,6 +22,8 @@ extern crate std;
 
 #[cfg_attr(not(feature = "std"), macro_use)]
 extern crate alloc;
+use alloc::boxed::Box;
+
 pub(crate) use futures_util::stream::Stream;
 /// Workaround for returning futures from async Traits.
 pub type LocalBoxFuture<'a, T> = core::pin::Pin<Box<dyn core::future::Future<Output = T> + 'a>>;

@@ -4,8 +4,8 @@ use crate::BTAddress;
 use crate::ConversionError;
 use core::convert::TryFrom;
 use futures_util::future::LocalBoxFuture;
-use std::convert::TryInto;
-use std::time::Duration;
+use core::convert::TryInto;
+use core::time::Duration;
 
 #[derive(Copy, Clone, Ord, PartialOrd, Eq, PartialEq, Hash, Debug)]
 pub struct AdvertisingInterval(u16);

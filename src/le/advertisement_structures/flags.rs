@@ -1,7 +1,7 @@
 use crate::le::advertisement::{AdStructureType, AdType, UnpackableAdStructType};
 use crate::PackError;
 use core::convert::TryFrom;
-use std::convert::TryInto;
+use core::convert::TryInto;
 
 #[derive(Copy, Clone, PartialOrd, PartialEq, Ord, Eq, Debug, Hash)]
 #[repr(u8)]

@@ -13,6 +13,7 @@ use core::ops::DerefMut;
 use core::pin::Pin;
 use core::task::{Context, Poll};
 use core::u32;
+use alloc::boxed::Box;
 use futures_util::future::{poll_fn, LocalBoxFuture};
 
 impl From<PackError> for StreamError {

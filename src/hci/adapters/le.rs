@@ -24,6 +24,7 @@ use core::convert::TryFrom;
 use futures_util::future::LocalBoxFuture;
 use futures_util::stream::LocalBoxStream;
 use futures_util::{FutureExt, StreamExt};
+use alloc::boxed::Box;
 
 pub struct LEAdapter<A: adapter::Adapter, H: UnrecognizedEventHandler> {
     pub adapter: Adapter<A, H>,
